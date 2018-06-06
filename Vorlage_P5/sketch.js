@@ -232,7 +232,7 @@ function planeView() {
   } else if (view < 5) {
     image(imgChristoph5, 0 + gv, 0, width, width * 2)
   } else {
-    image(imgZewen1, 0 + gv, 0, width, width * 2)
+    image(imgZewen1, 0 + gv, 0, height * 2, height)
   }
 }
 
