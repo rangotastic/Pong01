@@ -43,7 +43,7 @@ let imgArne5;
 let imgChristoph3;
 let imgChristoph4;
 let imgChristoph5;
-let imgZewen1;
+//let imgZewen1;
 
 
 function preload(){
@@ -53,7 +53,7 @@ function preload(){
   imgChristoph3 = loadImage("src/Christoph_3.png");
   imgChristoph4 = loadImage("src/Christoph_4.png");
   imgChristoph5 = loadImage("src/Christoph_5.png");
-  imgZewen1 = loadImage("src/Zewen_1.png");
+//  imgZewen1 = loadImage("src/Zewen_1.png");
 
 }
 
@@ -236,6 +236,6 @@ function planeView() {
   } else if (view == 5) {
     image(imgChristoph5, 0, 0)
   } else {
-    image(imgZewen1, 0, 0)
+    image(imgChristoph3, 0, 0)
   }
 }
