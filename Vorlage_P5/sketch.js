@@ -46,16 +46,15 @@ let imgChristoph5;
 //let imgZewen1;
 
 
-function preload(){
-  imgArne3 = loadImage("src/Arne_3.png");
-  imgArne4 = loadImage("src/Arne_4.png");
-  imgArne5 = loadImage("src/Arne_5.png");
-  imgChristoph3 = loadImage("src/Christoph_3.png");
-  imgChristoph4 = loadImage("src/Christoph_4.png");
-  imgChristoph5 = loadImage("src/Christoph_5.png");
-//  imgZewen1 = loadImage("src/Zewen_1.png");
-
-}
+// function preload(){
+//   imgArne3 = loadImage("src/Arne_3.png");
+//   imgArne4 = loadImage("src/Arne_4.png");
+//   imgArne5 = loadImage("src/Arne_5.png");
+//   imgChristoph3 = loadImage("src/Christoph_3.png");
+//   imgChristoph4 = loadImage("src/Christoph_4.png");
+//   imgChristoph5 = loadImage("src/Christoph_5.png");
+// //  imgZewen1 = loadImage("src/Zewen_1.png");
+//}
 
 
 
@@ -93,7 +92,7 @@ function draw() {
   backgr();
   ball();
   fullPadel(px, py);
-
+  print(view);
   //speed...................................................................................................................
   s = s + 0.009;
 
@@ -223,19 +222,35 @@ function punkte() {
 }
 
 function planeView() {
-  if (view == 0) {
+  if (view < 1) {
     image(imgArne3, 0, 0)
-  } else if (view == 1) {
+  } else if (view < 2) {
     image(imgArne4, 0, 0)
-  } else if (view == 2) {
+  } else if (view < 3) {
     image(imgArne5, 0, 0)
-  } else if (view == 3) {
+  } else if (view < 4) {
     image(imgChristoph3, 0, 0)
-  } else if (view == 4) {
+  } else if (view < 5) {
     image(imgChristoph4, 0, 0)
-  } else if (view == 5) {
+  } else if (view < 6) {
     image(imgChristoph5, 0, 0)
   } else {
     image(imgChristoph3, 0, 0)
   }
 }
+//   if (view < 1) {
+//     background(0)
+//   } else if (view < 2) {
+//     background(255)
+//   } else if (view < 3) {
+//     background(255, 0, 0)
+//   } else if (view < 4) {
+//     background(0, 255, 0)
+//   } else if (view < 5) {
+//     background(0, 0, 255)
+//   } else if (view < 6) {
+//     background(255, 255, 0)
+//   } else {
+//     background(0, 255, 255)
+//   }
+// }
