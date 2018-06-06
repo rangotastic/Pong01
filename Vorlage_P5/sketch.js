@@ -223,19 +223,19 @@ function punkte() {
 
 function planeView() {
   if (view < 1) {
-    image(imgArne3, 0, 0)
+    image(imgArne3, 0, 0,width,width*2)
   } else if (view < 2) {
-    image(imgArne4, 0, 0)
+    image(imgArne4, 0, 0,width,width*2)
   } else if (view < 3) {
-    image(imgArne5, 0, 0)
+    image(imgArne5, 0, 0,width,width*2)
   } else if (view < 4) {
-    image(imgChristoph3, 0, 0)
+    image(imgChristoph3, 0, 0,width,width*2)
   } else if (view < 5) {
-    image(imgChristoph4, 0, 0)
+    image(imgChristoph4, 0, 0,width,width*2)
   } else if (view < 6) {
-    image(imgChristoph5, 0, 0)
+    image(imgChristoph5, 0, 0,width,width*2)
   } else {
-    image(imgChristoph3, 0, 0)
+    image(imgChristoph3, 0, 0,width,width*2)
   }
 }
 //   if (view < 1) {
