@@ -53,7 +53,7 @@ function preload() {
   imgChristoph3 = loadImage("src/Christoph_3.png");
   imgChristoph4 = loadImage("src/Christoph_4.png");
   imgChristoph5 = loadImage("src/Christoph_5.png");
-//  imgZewen1 = loadImage("src/Zewen_1.png");
+  imgZewen1 = loadImage("src/Zewen_1.PNG");
 }
 
 
@@ -75,7 +75,7 @@ function setup() {
   bp = 0;
   bd = width / 15;
   pn = 0;
-  view = random(0, 7);
+  view = random(0, 6);
 
 
   //für den arc befehl
@@ -92,7 +92,6 @@ function draw() {
   backgr();
   ball();
   fullPadel(px, py);
-  print(view);
   //speed...................................................................................................................
   s = s + 0.009;
 
@@ -126,15 +125,14 @@ function backgr() { //.............................................
   //  background(255);
   fill(200);
   noStroke();
-  gv = (rotationY) / (width / 180);
-  rect(0, 0, width / 50 + gv, height)
-  rect(width - (width / 50 - gv), 0, width / 50 - gv, height)
+  rect(0, 0, width / 50, height)
+  rect(width - (width / 50), 0, width / 50, height)
   noFill();
   stroke(200);
   strokeWeight(width / 4);
   strokeCap(SQUARE);
-  arc(width / 2, width / 2 + width / 100, width - width / 25 + width / 4 - gv, width - width / 25 + width / 4, 180, 0);
-  arc(width / 2, height - (width / 2 + width / 100), width - width / 25 + width / 4 - gv, width - width / 25 + width / 4, 0, 180);
+  arc(width / 2, width / 2 + width / 100, width - width / 25 + width / 4, width - width / 25 + width / 4, 180, 0);
+  arc(width / 2, height - (width / 2 + width / 100), width - width / 25 + width / 4, width - width / 25 + width / 4, 0, 180);
 
 }
 
@@ -222,22 +220,23 @@ function punkte() {
 }
 
 function planeView() {
+  gv = (rotationY) / (width / 180);
   if (view < 1) {
-    image(imgArne3, 0, 0, height * 2, height)
+    image(imgArne3, 0 + gv, 0, height * 2, height)
   } else if (view < 2) {
-    image(imgArne4, 0, 0, height * 2, height)
+    image(imgArne4, 0 + gv, 0, height * 2, height)
   } else if (view < 3) {
-    image(imgArne5, 0, 0, height * 2, height)
+    image(imgArne5, 0 + gv, 0, height * 2, height)
   } else if (view < 4) {
-    image(imgChristoph3, 0, 0, height * 2, height)
+    image(imgChristoph3, 0 + gv, 0, height * 2, height)
   } else if (view < 5) {
-    image(imgChristoph4, 0, 0, width, width * 2)
-  } else if (view < 6) {
-    image(imgChristoph5, 0, 0, width, width * 2)
+    image(imgChristoph5, 0 + gv, 0, width, width * 2)
   } else {
-    image(imgChristoph5, 0, 0,width,width*2)
+    image(imgZewen1, 0 + gv, 0, width, width * 2)
   }
 }
+
+//to test in chrome
 //   if (view < 1) {
 //     background(0)
 //   } else if (view < 2) {
