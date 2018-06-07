@@ -226,7 +226,7 @@ function punkte(y) {
 }
 
 function planeView() {
-  gv = rotationY*width/360-width/4;
+  gv = rotationY*width/360+width/4;
   if (view < 1) {
     image(imgArne3, 0 - gv, 0, height * 2, height)
   } else if (view < 2) {
