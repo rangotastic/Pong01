@@ -90,6 +90,7 @@ function draw() {
   background(255);
   planeView();
   backgr();
+  punkte(height/50);
   ball();
   fullPadel(px, py);
   //speed...................................................................................................................
@@ -137,10 +138,10 @@ function backgr() { //.............................................
 }
 
 
-function fullPadel(x, y) { //.............................................
+function fullPadel( x,y) { //.............................................
   strokeCap(SQUARE);
   fill(220);
-  px = (width / 2) + (rotationY * (width / 180));
+  px = (width / 2) + (rotationY * (width / 120));
   quad(x - width / 7, y, x - width / 7, y + width / 30, x + width / 7, y + width / 30, x + width / 7, y);
   stroke(255);
   strokeWeight(2);
@@ -195,20 +196,20 @@ function collision() { //.............................................
 
 
 
-function punkte() {
-  fill(190);
-  ellipse(x, y + 30, 50, 50);
-  fill(200);
-  strokeCap(ROUND);
-  strokeWeight(1);
-  noFill();
-  arc(x, y + 30, circle + 10, circle + 10, 0, 180);
-  arc(x, y + 30, circle, circle, start, degree);
-  arc(x, y + 30, circle - 10, circle - 10, -start, -degree);
-
-  degree = degree + 1.5;
-  start = degree - n;
-  n = n + 0.5;
+function punkte(y) {
+  // fill(190);
+  // ellipse(x, y + 30, 50, 50);
+  // fill(200);
+  // strokeCap(ROUND);
+  // strokeWeight(1);
+  // noFill();
+  // arc(x, y + 30, circle + 10, circle + 10, 0, 180);
+  // arc(x, y + 30, circle, circle, start, degree);
+  // arc(x, y + 30, circle - 10, circle - 10, -start, -degree);
+  //
+  // degree = degree + 1.5;
+  // start = degree - n;
+  // n = n + 0.5;
 
 
 
@@ -216,27 +217,30 @@ function punkte() {
   fill(255);
   noStroke();
   textStyle(BOLD);
-  text(pu, x - 4 - pn, y + 30 + 3);
+  textAlign(CENTER,CENTER)
+  text(pu,width/20 , y);
+  text("B E S T :"+bp,width-width/10, y);
+
 }
 
 function planeView() {
-  gv = (rotationY) / (width / 180);
+  gv = (rotationY) / (width / 90);
   if (view < 1) {
-    image(imgArne3, 0 + gv, 0, height * 2, height)
+    image(imgArne3, 0 - gv, 0, height * 2, height)
   } else if (view < 2) {
-    image(imgArne4, 0 + gv, 0, height * 2, height)
+    image(imgArne4, 0 - gv, 0, height * 2, height)
   } else if (view < 3) {
-    image(imgArne5, 0 + gv, 0, height * 2, height)
+    image(imgArne5, 0 - gv, 0, height * 2, height)
   } else if (view < 4) {
-    image(imgChristoph3, 0 + gv, 0, height * 2, height)
+    image(imgChristoph3, 0 - gv, 0, height * 2, height)
   } else if (view < 5) {
-    image(imgChristoph5, 0 + gv, 0, width, width * 2)
+    image(imgChristoph5, 0 - gv, 0, width, width * 2)
   } else {
-    image(imgZewen1, 0 + gv, 0, height * 2, height)
+    image(imgZewen1, 0 - gv, 0, height * 2, height)
   }
 }
 
-//to test in chrome
+// // to test in chrome
 //   if (view < 1) {
 //     background(0)
 //   } else if (view < 2) {
