@@ -90,7 +90,7 @@ function draw() {
   background(255);
   planeView();
   backgr();
-  punkte(height/50);
+  punkte(height / 50);
   ball();
   fullPadel(px, py);
   //speed...................................................................................................................
@@ -138,7 +138,7 @@ function backgr() { //.............................................
 }
 
 
-function fullPadel( x,y) { //.............................................
+function fullPadel(x, y) { //.............................................
   strokeCap(SQUARE);
   fill(220);
   px = (width / 2) + (rotationY * (width / 120));
@@ -217,9 +217,10 @@ function punkte(y) {
   fill(255);
   noStroke();
   textStyle(BOLD);
-  textAlign(CENTER,CENTER)
-  text(pu,width/20 , y);
-  text("B E S T :"+bp,width-width/10, y);
+  textAlign(CENTER, CENTER);
+  textSize(width/50);
+  text(pu, width / 20, y);
+  text("B E S T  " + bp, width - width / 10, y);
 
 }
 
