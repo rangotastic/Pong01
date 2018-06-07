@@ -142,7 +142,7 @@ function fullPadel(x, y) { //.............................................
   strokeCap(SQUARE);
   fill(220);
   px = (width / 2) + (rotationY * (width / 120));
-  quad(x - width / 7, y, x - width / 7, y + width / 30, x + width / 7, y + width / 30, x + width / 7, y);
+  //quad(x - width / 7, y, x - width / 7, y + width / 30, x + width / 7, y + width / 30, x + width / 7, y);
   rect(x-width/7,y,width/3.5,width/30,width/60);
   stroke(255);
   strokeWeight(2);
@@ -221,7 +221,7 @@ function punkte(y) {
   textAlign(CENTER, CENTER);
   textSize(width/25);
   text(pu, width / 20, y);
-  text("B E S T  " + bp, width - width / 10, y);
+  text("B E S T  " + bp, width - width / 5, y);
 
 }
 
