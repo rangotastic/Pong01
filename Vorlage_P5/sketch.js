@@ -221,12 +221,12 @@ function punkte(y) {
   textAlign(CENTER, CENTER);
   textSize(width/25);
   text(pu, width / 20, y);
-  text("B E S T  " + bp, width - width / 10, y);
+  text("B E S T  " + bp, width - width / 5, y);
 
 }
 
 function planeView() {
-  gv = (rotationY) / (width / 15);
+  gv = rotationY*width/360;
   if (view < 1) {
     image(imgArne3, 0 - gv, 0, height * 2, height)
   } else if (view < 2) {
